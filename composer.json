@@ -1,0 +1,29 @@
+{
+    "name": "spacedmonkey/user-query-cache",
+    "description": "Adds caching to complete sql queries found in WP_User_Query.",
+    "homepage": "https://github.com/spacedmonkey/user-query-cache/",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Jonathan Harris",
+            "homepage": "http://www.spacedmonkey.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/spacedmonkey/user-query-cache/issues",
+        "source": "https://github.com/spacedmonkey/user-query-cache/"
+    },
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "dev-develop",
+        "sebastian/phpcpd": "*"
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs",
+        "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+    }
+}
