@@ -1,9 +1,8 @@
 User Query Cache
 ===================
 
-Cache wp_nav_menu output in object cache. This is a simple "dropin" style plugin with no settings panel. Best used as an mu-plugin. Once in place, it caches all menus on the page, wherever they are called.
+This plugin, hooks deep into the WP_User_Query class, add caches the result of the query the first time, in object cache. Meaning the next time the same query is called, the result will be called from object cache. Adding this plugin, will improve performance on any sites where many / complex WP_User_Query are calls.  Best used as an mu-plugin. Once in place, it caches all calls to WP_User_Query on the page, wherever they are called.
 
-This plugin is based on the ideas found in [Advanced Post Caching](https://github.com/Automattic/advanced-post-cache) plugin by [Automattic](http://automattic.com/).
 
 If you wish to follow the development of this plugin, view the code on the official plugin [website](http://www.spacedmonkey.com/ "website") or follow me on twitter [@thespacedmonkey](https://twitter.com/thespacedmonkey)
 
